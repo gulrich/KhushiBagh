@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Khushi Bagh</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="itemName">Nom de l\'article</string>
+    <string name="quantity">Quantité</string>
+    <string name="add">Ajouter</string>
+    <string name="newCategory">Nouvelle catégorie</string>
+    
+    <string name="done">Terminé</string>
+    <string name="refresh">Rafraichir</string>
+    <string name="newItem">Nouvel article</string>
+
+</resources>

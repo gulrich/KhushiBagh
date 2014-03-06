@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:textColor="#ffffff"
+            android:background="#f17002"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:textIsSelectable="true" />
+
+</TableLayout>

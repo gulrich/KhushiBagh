@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/itemName"
+        android:layout_weight="1" />
+
+        
+    <EditText
+        android:id="@+id/editQuantity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/quantity" />
+
+
+     <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
+
+     <EditText
+        android:id="@+id/editNewCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:hint="@string/newCategory" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add" />
+    
+</LinearLayout>
