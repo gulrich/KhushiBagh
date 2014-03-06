@@ -2,7 +2,7 @@ KhushiBagh
 ==========
 
 
-App mobile:
+== App mobile: ==
 
 - Ajouter une nouvelle entrée (nom, type, qtty)
 	-> file d'attente d'envoi (jusqu'à ce qu'une connexion à un réseau puisse être établie)
@@ -12,7 +12,7 @@ App mobile:
 	-> valider à la fin des courses pour les enlever de la liste des choses à avoir
 
 
-Serveur:
+== Serveur: ==
 - list all
 	db -> select * from liste courante
 
@@ -28,6 +28,6 @@ Serveur:
 	if new category -> insert into category new category
 
 
-Database:
+== Database: ==
 - Liste courante
 - Archive des achats
