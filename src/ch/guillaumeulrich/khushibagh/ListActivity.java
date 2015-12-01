@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import ch.guillaumeulrich.khushibagh.cache.Cache;
 import ch.guillaumeulrich.khushibagh.element.Element;
 import ch.guillaumeulrich.khushibagh.element.ListAdapter;
 import ch.guillaumeulrich.khushibagh.server.ListRetrieve;
@@ -23,9 +22,7 @@ public class ListActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list);
-		
-		Cache.context = this;
-		
+				
 		ListRetrieve lr = new ListRetrieve(this);
         lr.execute();
 	}

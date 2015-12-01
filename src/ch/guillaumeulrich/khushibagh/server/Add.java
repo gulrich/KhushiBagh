@@ -27,7 +27,7 @@ import ch.guillaumeulrich.khushibagh.element.Category;
 	private static final int CONNECTION_TIMEOUT = 5 * 1000;
 	private static final int BUFFER_SIZE = 512;
 
-	private static final String HOST = "http://guillaumeulrich.ch/courses/";
+	private static final String PATH = HttpClientFactory.HOST+"item/add/";
 
 	private Throwable exception = null;
 
@@ -54,9 +54,9 @@ import ch.guillaumeulrich.khushibagh.element.Category;
 		HttpConnectionParams.setSoTimeout(httpParams, SOCKET_TIMEOUT);
 		HttpConnectionParams.setConnectionTimeout(httpParams, CONNECTION_TIMEOUT);
 
-		AbstractHttpClient client = SwengHttpClientFactory.getInstance();
+		AbstractHttpClient client = HttpClientFactory.getInstance();
 		client.setParams(httpParams);
-		String callUrl = HOST + "add/?element="+name+"&cid="+category.getId()+"&qtty="+quantity;
+		String callUrl = PATH + "?element="+name+"&cid="+category.getId()+"&qtty="+quantity;
 		
 		Log.i("Lists", callUrl);
 		HttpGet request = new HttpGet(callUrl);

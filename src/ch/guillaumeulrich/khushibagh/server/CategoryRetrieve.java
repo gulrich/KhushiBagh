@@ -46,8 +46,8 @@ import com.example.khushibagh.R;
 	private static final int CONNECTION_TIMEOUT = 5 * 1000;
 	private static final int BUFFER_SIZE = 512;
 
-	private static final String HOST = "http://guillaumeulrich.ch/courses/";
-
+	private static final String PATH = HttpClientFactory.HOST+"category/list/";
+	
 	private Throwable exception = null;
 	private Activity ctx;
 
@@ -66,10 +66,10 @@ import com.example.khushibagh.R;
 		HttpConnectionParams.setSoTimeout(httpParams, SOCKET_TIMEOUT);
 		HttpConnectionParams.setConnectionTimeout(httpParams, CONNECTION_TIMEOUT);
 
-		AbstractHttpClient client = SwengHttpClientFactory.getInstance();
+		AbstractHttpClient client = HttpClientFactory.getInstance();
 		client.setParams(httpParams);
-		Log.i("Lists", HOST + "category/");
-		HttpGet request = new HttpGet(HOST + "category/");
+		Log.i("Lists", PATH);
+		HttpGet request = new HttpGet(PATH);
 
 		try {
 			HttpResponse response = client.execute(request);
@@ -118,7 +118,7 @@ import com.example.khushibagh.R;
 					if(position < result.size()-1) {
 						TextView tv = null;
 						if(convertView == null) {
-							convertView = LayoutInflater.from(ctx).inflate(R.layout.spinner_category, null);
+							convertView = LayoutInflater.from(ctx).inflate(R.layout.spinner_category, parent);
 							tv = (TextView) convertView.findViewById(R.id.textCategory);
 							convertView.setTag(tv);
 						} else {					
